@@ -6,13 +6,14 @@
         body {background-color:black;
             color: white;
         }
-
     </style>
     
 <script>
-    function album1(){
+    function album1(){ 
     document.getElementById("pic").display = "Enter the Wu-Tang Clan - 36 Chambers";
     }
+    
+
 </script>
     
 </head>
@@ -21,6 +22,13 @@
     <h1>The Wu-Tang Clan</h1>
     <h2>Members:</h2>
     <p id="members">Members</p>
+    
+    <p id="demo"></p>
+    
+    <p id="WuTang"></p>
+
+
+<!--Jay, this was your original array. I spiced it up a bit with the funciton register, below :) 
   <script>
         var WuTang = ["Ghostface Killah", 
                       "Method Man", 
@@ -32,8 +40,32 @@
                       "Inspectah Deck", 
                       "Masta Killa"]; 
         document.getElementById("members").innerHTML = WuTang;
-    </script>
+   </script> 
+    /
+-->
     
+    
+    <script>
+        var WuTang = ["Ghostface Killah", 
+                      "Method Man", 
+                      "Ol' Dirty Bastard", 
+                      "GZA", 
+                      "RZA", 
+                      "Raekwon the Chef", 
+                      "U-God", 
+                      "Inspectah Deck", 
+                      "Masta Killa"]; 
+        function register(){
+
+            var printThis ="";
+            var arrayLength = WuTang.length;
+            for (var i = 0; i < arrayLength; i++) {
+                printThis += "<br>"+WuTang[i];
+            }
+        return printThis; 
+        }
+        document.getElementById("WuTang").innerHTML = register();
+    </script>
     <p>What was the first Wu-Tang Clan album?</p>
     <button onclick="album1">Go</button>
     
