@@ -9,10 +9,18 @@
 
     </style>
     
+<script>
+    function album1(){
+    document.getElementById("pic").display = "Enter the Wu-Tang Clan - 36 Chambers";
+    }
+</script>
+    
 </head>
 <body>
+    
     <h1>The Wu-Tang Clan</h1>
-    <p id="members"></p>
+    <h2>Members:</h2>
+    <p id="members">Members</p>
   <script>
         var WuTang = ["Ghostface Killah", 
                       "Method Man", 
@@ -23,7 +31,12 @@
                       "U-God", 
                       "Inspectah Deck", 
                       "Masta Killa"]; 
-        document.getElementById("members").innerHTML = WuTang[1];
+        document.getElementById("members").innerHTML = WuTang;
     </script>
+    
+    <p>What was the first Wu-Tang Clan album?</p>
+    <button onclick="album1">Go</button>
+    
+    
 </body>
 </html>
